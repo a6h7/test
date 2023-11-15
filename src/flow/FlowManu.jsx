@@ -1,6 +1,6 @@
 import {react, useHistory} from "react"
 
-const FlowMenu = (props) => {
+export const FlowMenu = (props) => {
     const history = useHistory();
     return (
         <>
