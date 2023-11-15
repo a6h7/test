@@ -1,12 +1,18 @@
-import {react, useHistory} from "react"
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-export const FlowMenu = (props) => {
-    const history = useHistory();
+const FlowMenu = (props) => {
+    let navigate = useNavigate(); 
+    const routeChange = () =>{ 
+        navigate('/');
+    }
     return (
         <>
             <h3>Flow menu</h3>
             <br/>
-            <button onClick={() => history.history} >Back</button>
+            <button className='btn btn-danger' onClick={routeChange} >Back</button>
         </>
     );
 }
+
+export default FlowMenu;
